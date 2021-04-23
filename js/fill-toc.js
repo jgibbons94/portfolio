@@ -13,6 +13,10 @@ data = [
 	{
 		section: "Block 1",
 		links: [
+			{
+				label: "Week 1 notes",
+				url: "week01/index.html"
+			}
 		]
 	}
 ]
