@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Story editor</title>
+    <script>
+      //Focus more on functions than on objects.
+      //Save typing in the actual code.
+      //Preserve readability.
+      window.onload = function(){
+              window.query = document.querySelector.bind(document);
+              window.load = localStorage.getItem.bind(localStorage);
+              window.save = localStorage.setItem.bind(localStorage);
+            }
+      function loadStory(){
+              query("#story_editor").value = load(query("#name_input").value);
+            }
+      function saveStory(){
+              save(query("#name_input").value, query("#story_editor").value);
+            }
+      function displayStory(){
+              query("#story_display").innerHTML = query("#story_editor").value;
+            }
+    </script>
+  </head>
+  <body>
+    <h1>Edit a story</h1>
+    Title: <input id="name_input"></input>
+    <section>
+      <button onclick="loadStory()">Edit</button>
+      <button onclick="saveStory()">Save</button>
+      <button onclick="displayStory()">Show</button>
+    </section>
+    <textarea id="story_editor" placeholder="Get to writing"></textarea>
+    <section id="story_display"></section>
+  </body>
+</html>
