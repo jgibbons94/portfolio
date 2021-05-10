@@ -1,4 +1,10 @@
 body{
   background: #aaaaaa;
-  font-weight: 500
+  font-weight: 500;
+}
+a{
+  color: #000070;
+}
+a:visited{
+  color:#700070;
 }
