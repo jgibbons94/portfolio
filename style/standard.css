@@ -1,10 +1,18 @@
 body{
   background: #aaaaaa;
   font-weight: 500;
+  font-size: 16pt;
 }
 a{
   color: #000070;
 }
 a:visited{
   color:#700070;
+}
+footer {
+  border-top-width: thin;
+  border-top-color: black;
+  border-top-style: dashed;
+  margin-top: 1em;
+  padding-top: 1em;
 }

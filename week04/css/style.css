@@ -11,3 +11,12 @@ label:after{
   width: fit-content;
   margin-top: 0.2em;
 }
+form input{
+  margin-left: 0em;
+  margin-top: 0.25em;
+  margin-bottom: 0.25em;
+}
+form button{
+ margin-left: 13.1em;
+ margin-top:0.25em;
+}
