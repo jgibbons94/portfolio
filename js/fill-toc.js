@@ -14,27 +14,27 @@ data = [
     links: [
       {
         label: "Week 1",
-        url: "week01/index.html"
+        url: "week01/"
       },
       {
         label: "Week 2",
-        url: "week02/index.html"
+        url: "week02/"
       },
       {
         label: "Week 3",
-        url: "week03/index.html"
+        url: "week03/"
       },
       {
         label: "Week 4",
-        url: "week04/index.html"
+        url: "week04/"
       },
       {
         label: "Week 5",
-        url: "week05/index.html"
+        url: "week05/"
       },
       {
         label: "Week 6",
-        url: "week06/index.html"
+        url: "week06/"
       },
     ]
   }
