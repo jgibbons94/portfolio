@@ -32,6 +32,10 @@ data = [
         label: "Week 5",
         url: "week05/index.html"
       },
+      {
+        label: "Week 6",
+        url: "week06/index.html"
+      },
     ]
   }
 ]
