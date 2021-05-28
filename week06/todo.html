@@ -1,33 +1,40 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <link href='/portfolio/style/standard.css' type='text/css' rel='stylesheet'>
-    <link href="style/todo.css" type="text/css" rel="stylesheet">
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Keep track of all the things you need to do.">
-    <title>TODO</title>
-  </head>
-  <body>
-    <h1>TODO</h1>
-    <ul id="todo-list">
-      <li>
-        <input type="checkbox" />
-        <label>Active Task</label>
-        <input type="button" value="X" />
-      </li>
-      <li>
-        <input type="checkbox" checked />
-        <label>Completed Task</label>
-        <input type="button" value="X" />
-    </ul>
-    <div>
-      <span>
-        <span id="active-count"></span> items left</span>
-      <div>All.</div>
-      <div>Active.</div>
-      <div>Completed</div>
-    </div>
-    <footer><a href='/portfolio/'>index</a></footer>
-  </body>
+    <head>
+        <link href='/portfolio/style/standard.css' type='text/css' rel='stylesheet'>
+        <link href="style/todo.css" type="text/css" rel="stylesheet">
+        <script type="module" src="script/todo.js"></script>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Keep track of all the things you need to do.">
+        <title>TODO</title>
+    </head>
+    <body>
+        <main id="todo-main" class="todo-list-app filter-all">
+            <h1>TODO</h1>
+            <ul id="todo-list"></ul>
+            <form class="filter-form" id="filter-form">
+                <label class="filter-label" id="filter-all">
+                    <input type="radio" name="filter" value="filter-all">All
+                </label>
+                <label class="filter-label" id="filter-active">
+                    <input type="radio" name="filter" value="filter-active">Active.
+                </label>
+                <label class="filter-label" id="filter-done">
+                    <input type="radio" name="filter" value="filter-done">Completed
+                </label>
+            </form>
+            <span class="items-left-label">
+                <span id="active-items-count"></span>
+                items left
+            </span>
+            <form class="add-item nosubmit" id="add-item-form">
+                <input type="text" id="item-text">
+                <input type="button" value="+" id="add-item-button">
+            </form>
+        </main>
+        <footer>
+            <a href='/portfolio/'>index</a>
+        </footer>
+    </body>
 </html>
