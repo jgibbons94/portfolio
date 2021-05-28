@@ -13,6 +13,11 @@ li.todo-item {
     padding-bottom: 0.5em;
     border-style: groove;
     border-width: medium;
+    transform: scale(1);
+    transition-property: height, transform, padding;
+    transition-duration: 1s,1s,1s;
+    transition-delay: 1s,0s,1s;
+    transition-timing-function: ease, ease,ease;
 }
 
 .filters {
@@ -64,11 +69,15 @@ main.todo-list-app.filter-active li.todo-item.active {
 }
 
 main.todo-list-app.filter-active li.todo-item.done {
-    display: none;
+    transform: scale(1,0);
+    max-height: 0;
+    padding: 0;
 }
 
 main.todo-list-app.filter-done li.todo-item.active {
-    display: none;
+    transform: scale(1,0);
+    max-height: 0;
+    padding: 0;
 }
 
 main.todo-list-app.filter-done li.todo-item.done {
