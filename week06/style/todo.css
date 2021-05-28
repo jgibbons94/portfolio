@@ -1,0 +1,116 @@
+ul#todo-list {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    padding-right: 0em;
+    padding-left: 0em;
+}
+
+li.todo-item {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    border-style: groove;
+    border-width: medium;
+}
+
+.filters {
+    display: flex;
+    justify-content: space-between;
+}
+
+input[type="checkbox"] {
+    margin-right: 1.5em;
+    display: inline-block;
+    align-self: flex-start;
+    min-width: 1.5em;
+    min-height: 1.5em;
+    margin-left: 1em;
+}
+
+li.done label.todo-text {
+    text-decoration-line: line-through;
+}
+
+label.todo-text {
+    display: flex;
+    flex-grow: 20;
+}
+
+form.add {
+    display: flex;
+    justify-content: stretch;
+    margin-top: 3em;
+}
+
+.add-item input[type="text"] {
+    width: 100%;
+}
+
+form.add-item {
+    display: flex;
+    margin-top: 3em;
+}
+
+main.todo-list-app {
+    padding-left: 2.5em;
+    padding-right: 2.5em;
+}
+
+
+main.todo-list-app.filter-active li.todo-item.active {
+    display: flex;
+}
+
+main.todo-list-app.filter-active li.todo-item.done {
+    display: none;
+}
+
+main.todo-list-app.filter-done li.todo-item.active {
+    display: none;
+}
+
+main.todo-list-app.filter-done li.todo-item.done {
+    display: flex;
+}
+
+main.todo-list-app.filter-all li.todo-item.active {
+    display: flex;
+}
+
+main.todo-list-app;.filter-all li.todo-item.done {
+    display: flex
+}
+
+label.filter-label input[type="radio"] {
+    display: none;
+}
+
+
+label.filter-label {
+    border: outset;
+    display: inline-block;
+    padding: 0.5em;
+}
+
+main.filter-all label#filter-all {
+    border: inset;
+}
+
+main.filter-active label#filter-active {
+    border: inset;
+}
+
+main.filter-done label#filter-done {
+    border: inset;
+}
+
+form#filter-form {
+    display: flex;
+    justify-content: space-between;
+}
+
+.todo-item input[type="button"] {
+    margin-right: 1em;
+}
