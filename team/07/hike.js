@@ -90,6 +90,7 @@ export class Hike {
             ${input.value}</p>
             `
             comments.appendChild(newComment)
+            input.value = "";
         })
 
         details.appendChild(addNewComment)
