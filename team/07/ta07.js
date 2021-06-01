@@ -28,14 +28,14 @@ hikeList.push(new Hike(
   3
 ))
 
-console.table(hikeList)
+//console.table(hikeList)
 const imgBasePath = "//byui-cit.github.io/cit261/examples/";
 //on load grab the array and insert it into the page
 
 
 
 
-console.table(hikeList)
+//console.table(hikeList)
 
 window.addEventListener("load", () => {
 

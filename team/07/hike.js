@@ -24,6 +24,7 @@ export class Hike {
         
         this.showingDetails = false
         this.id = id
+        this.getAllComments()
     }
 
     renderHike() {
@@ -56,33 +57,16 @@ export class Hike {
         <h6>Description</h6>
         <p>${this.description}</p>
         <h6>Directions</h6>
-        <p>${this.directions}</p>`
-
-        let addNewComment = document.createElement("div")
-        addNewComment.id = `comments${this.id}`
-
-        let input = document.createElement("input")
-        input.type = "text"
-        input.textContent = "Comment"
-
-        addNewComment.appendChild(input)
+        <p>${this.directions}</p>
+        <div id="${this.id}"><input type="text">Comment</input>
+        <button type="submit">Submit</button></div>`
 
 
-        let button = document.createElement("button")
-        button.type = "submit"
-        button.textContent = "Submit"
 
-        addNewComment.appendChild(button)
-
-        if (this.commentsList.length >= 1) {
-            this.commentsList.forEach(comment => {
-                console.log(comment)
-                this.addComment(comment)
-            })
-        }
-                button.addEventListener("click", () => {
-            this.addComment("Local User", input.value)
-
+        const addComment = this.addComment.bind(this, "Local User");
+        const button = details.querySelector("button");
+        button.addEventListener("click", () => {
+            const input = details.querySelector("input")
             let newComment = document.createElement("div")
             newComment.class = "comments"
             newComment.innerHTML = `
@@ -90,22 +74,18 @@ export class Hike {
             ${input.value}</p>
             `
             comments.appendChild(newComment)
+            addComment(input.value);
             input.value = "";
         })
 
-        details.appendChild(addNewComment)
 
         let comments = document.createElement("div")
         comments.id = "comments"
         comments.class = "comments"
         comments.innerHTML= "<h6>Comments</h6>"
 
-        // if (this.getAllComments() == null) {
-        //     return details
-        // }
 
-        this.getAllComments()
-        
+
         this.commentsList.forEach(comment => {
             let newComment = document.createElement("div")
             newComment.class = "comments"
@@ -169,7 +149,7 @@ export class Hike {
         localStorage.setItem('comments', JSON.stringify(allComments))
 
         console.log(localStorage.getItem('comments'))
-    }   
+    }
 
     showCommentsList() {
         console.log('showCommentsList')
