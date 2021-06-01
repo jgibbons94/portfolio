@@ -61,9 +61,8 @@ window.addEventListener("load", () => {
         obj.showingDetails = true
       }
       else {
-        console.log(hike.parentElement.lastChild)
-
-        hike.parentElement.removeChild(hike.parentElement.lastChild)
+        let moreInfo = hike.parentElement.lastChild;
+        hike.parentElement.removeChild(moreInfo)
         obj.showingDetails = false
       }
 
