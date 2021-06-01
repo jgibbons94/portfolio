@@ -1,4 +1,4 @@
-import { Hike } from './Hike.js'
+import { Hike } from './hike.js'
 
 let hikeList = new Array()
 
