@@ -140,7 +140,15 @@ function renderOneHikeFull(hike) {
             <h3>How to get there</h3>
             <p>${hike.directions}</p>
         </div>
+        <div>
+        <h4>Comments</h4>
+        ${renderComments(hike)}
     
     `;
   return item;
+}
+function renderComments(hike)
+{
+  console.table(hike);
+  return "";
 }
