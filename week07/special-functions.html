@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <link href='/portfolio/style/standard.css' type='text/css'
+    rel='stylesheet'>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Notes about special function types
+    in JavaScript">
+    <title>Special Types of Functions</title>
+  </head>
+  <body>
+    <h1>Special Function Types in JavaScript</h1>
+    <ul>
+      <li>Immediately Invoked Function Expressions
+        <ul>
+          <li>Anonymous functions.</li>
+          <li>Wrap everything in a limited scope.</li>
+          <li>Why not just wrap code in braces?</li>
+        </ul>
+      </li>
+      <li>Async functions
+        <ul>
+          <li>asynchronous</li>
+          <li>declared with <code>async</code> keyword</li>
+          <li>called from normal functions with <code>await</code>
+          keyword</li>
+          <li>can call other asynchronous functions directly with
+          <code>async</code> keyword</li>
+          <li>they can be defined anonymously as lambdas preceded by
+          the <code>async</code> keyword.</li>
+        </ul>
+      </li>
+      <li>Generators
+        <ul>
+          <li>declared with <code>function*</code></li>
+          <li><code>yeild</code> instead of <code>return</code>.</li>
+          <li>continue where they left off on each call.</li>
+          <li>impure functions</li>
+          <li>I don't know if there's a way to define them
+          anonymously.</li>
+        </ul>
+      </li>
+    </ul>
+    <footer><a href='/portfolio/'>index</a></footer>
+  </body>
+</html>
