@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <link href='/portfolio/style/standard.css' type='text/css' rel='stylesheet'>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Week 7 index">
+    <title>Week 7</title>
+  </head>
+  <body>
+    <h1>Function Properties</h1>
+    <p>Chrome says these are the properties of any function:
+    <ul>
+      <li><code>length</code></li>
+      <li><code>name</code></li>
+      <li><code>apply</code></li>
+      <li><code>arguments</code></li>
+      <li><code>bind</code></li>
+      <li><code>call</code></li>
+      <li><code>caller</code></li>
+      <li><code>constructor</code></li>
+      <li><code>toString</code></li>
+      <li><code>hasOwnProperty</code></li>
+      <li><code>isPrototypeOf</code></li>
+      <li><code>propertyIsEnumerable</code></li>
+      <li><code>toLocaleString</code></li>
+      <li><code>valueOf</code></li>
+      <li><code>__defineGetter__</code></li>
+      <li><code>__defineSetter__</code></li>
+      <li><code>__lookupGetter__</code></li>
+      <li><code>__lookupSetter__</code></li>
+      <li><code>__proto__</code></li>
+    </ul>
+    <p>I will go over what I can find out about these, one at a time:</p>
+    <ul>
+      <li><code>length</code>
+        <p>This refers to the arity of the function.</p>
+      </li>
+      <li><code>name</code>
+        <p>This is the name of the variable that holds the function. Lambdas have an empty function string. I think it exists for debugging purposes.</p>
+      </li>
+      <li><code>apply</code>
+        <p>This calls the function. It can be useful if I want to iterate through a list of functions.</p>
+      </li>
+      <li><code>arguments</code>
+        <p>Chrome throws an error when I try to call this function.</p>
+      </li>
+      <li><code>bind</code>
+        <p>Returns a function that calls the given function after setting the "this" attribute and other hard-coded values. It's a nice way to give a function generic values.</p>
+      </li>
+      <li><code>call</code>
+        <p>Calls the function with a specified <code>this</code> and arguments. Whereas <code>call</code> takes a variable number of arguments,<code>apply</code> takes an array containing the arguments. </p>
+      </li>
+      <li><code>caller</code>
+        <p>Chrome throws an error when I try to call this function.</p>
+      </li>
+      <li><code>constructor</code>
+        <p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor">MDN</a> says this returns the function that created an instance of an object. Functions are objects too.</p>
+      </li>
+      <li><code>toString</code>
+        <p>Returns a string description of an object for the debugger to use.</p>
+      </li>
+      <li><code>hasOwnProperty</code>
+        <p><a href="https://262.ecma-international.org/11.0/#sec-hasownproperty">The ECMAScript 2020 draft</a> says this tests if an object has a property corresponding to a given key.</p>
+      </li>
+      <li><code>isPrototypeOf</code>
+        <p><a href="https://262.ecma-international.org/11.0/#sec-object.prototype.isprototypeof">The ECMAScript 2020 draft</a> says this function tests if <code>this</code> is in the given object's hierarchy.</p>
+      </li>
+    </ul>
+    <p>I stopped here because it became clear that the remaining properties belong to Object, not String.</p>
+
+    <footer><a href='/portfolio/'>index</a></footer>
+  </body>
+</html>
