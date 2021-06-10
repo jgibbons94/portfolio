@@ -40,6 +40,10 @@ data = [
         label: "Week 7",
         url: "week07/"
       },
+      {
+        label:'Week 8',
+        url: 'week08/'
+      }
     ]
   }
 ]

@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+  <head profile="http://www.w3.org/2005/10/profile">
+    <link rel="icon" type="image/png"  href="/portfolio/icons/favicon.png">
+    <link href='/portfolio/style/standard.css' type='text/css' rel='stylesheet'>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Week 8 notes That's all. Don't make me pretend otherwise.">
+    <title>Week 8 notes: A Strong Title</title>
+  </head>
+  <body>
+    <h1>Notes</h1>
+    <h2>READING</h2>
+    <ul>
+      <li>Transform moves, scales, and rotates elements</li>
+      <li>Accomplished with matrices in linear algebra</li>
+      <li>css transform arguments include
+        <ul>
+          <li>transform: inherit;</li>
+          <li>transform: initial;</li>
+          <li>transform: matrix(1, 0, 0, 1, 0, 0);</li>
+          <li>transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);</li>
+          <li>transform: none;</li>
+          <li>transform: perspective(10px);</li>
+          <li>transform: revert;</li>
+          <li>transform: rotate( 45deg);</li>
+          <li>transform: rotateX( 45deg);</li>
+          <li>transform: rotateY( 45deg);</li>
+          <li>transform: rotateZ( 45deg);</li>
+          <li>transform: scale(1.5);</li>
+          <li>transform: scale3d(1.5, 1.5, 1.5);</li>
+          <li>transform: scaleX(1.5);</li>
+          <li>transform: scaleY(1.5);</li>
+          <li>transform: skew( 10deg , 10deg);</li>
+          <li>transform: skewX( 10deg);</li>
+          <li>transform: skewY( 10deg);</li>
+          <li>transform: translate(10px, 10px);</li>
+          <li>transform: translate3d(10px, 10px, 10px);</li>
+          <li>transform: translateX(10px);</li>
+          <li>transform: translateY(10px);</li>
+          <li>transform: translateZ(10px);</li>
+          <li>transform: unset;</li>
+        </ul></li>
+        <li>transform arguments can be stacked.</li>
+        <li>Old browsers need prefix for transform to work.</li>
+        <li><a href="https://caniuse.com/?search=transform">Prefixes are unnecessary in browsers released or updated after 2015 except Opera Mini.</a></li>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-box">transform-box is an incomplete standard.</a></li>
+        <li>Css Transform origin values include:
+          <ul>
+            <li>transform-origin: bottom;</li>
+            <li>transform-origin: center;</li>
+            <li>transform-origin: inherit;</li>
+            <li>transform-origin: initial;</li>
+            <li>transform-origin: left;</li>
+            <li>transform-origin: right;</li>
+            <li>transform-origin: top;</li>
+          </ul></li>
+          <li>Transitions allow the smoothe appearance of changing state.</li>
+          <li>transition-delay sets the time to wait before causing the changes.</li>
+          <li>transition-timing sets the time it takes to complete the changes</li>
+          <li>transition-property specifies the properties that transition.</li>
+          <li>transition-timing-function specifies the mathematical function that describes how the property changes from one value to another.</li>
+          <li>transition-timing-function may be any of these values:
+            <ul><li>transition-timing-function:cubic-bezier;</li>
+              <li>transition-timing-function:ease;</li>
+              <li>transition-timing-function:ease-in;</li>
+              <li>transition-timing-function:ease-in-out;</li>
+              <li>transition-timing-function:ease-out;</li>
+              <li>transition-timing-function:inherit;</li>
+              <li>transition-timing-function:initial;</li>
+              <li>transition-timing-function:jump-both;</li>
+              <li>transition-timing-function:jump-end;</li>
+              <li>transition-timing-function:jump-none;</li>
+              <li>transition-timing-function:jump-start;</li>
+              <li>transition-timing-function:linear;</li>
+              <li>transition-timing-function:revert;</li>
+              <li>transition-timing-function:step-end;</li>
+              <li>transition-timing-function:step-start;</li>
+              <li>transition-timing-function:steps;</li>
+              <li>transition-timing-function:unset;</li>
+            </ul></li>
+            <li>CSS animations are defined with @keyframes</li>
+            <li>I previously did <a href="https://byui-cse.github.io/cse280-course/fto.html">this page showing an approximation of pi</a>
+             and <a href="https://byui-cse.github.io/cse280-course/rr.html">this page showing how similar the words 'readily' and 'reality' are</a>
+              with css keyframe animations when working as a teacher's assistant. I'm pretty sure I know what I'm doing.</li>
+            <li>Let's be honest: Canvas was made to replace Flash.</li>
+            <li>Canvas element coordinate system specified by widht and height attributes of elements.</li>
+            <li>Canvas can have 2D context or 3D webgl context</li>
+            <li>2D context draws and fills geometry with vector drawing commands common to every other language.</li>
+            <li>WebGL context has API very similar to OpenGL ES.</li>
+            <li>Canvas can draw other image elements, like other canvases, videos, images.</li>
+            <li>CORS trust applies to canvas drawing and image manipulation</li>
+            <li>It is possible to directly manipulate every pixel in a canvas element.</li>
+            <li>canvas animation can be better timed with animation frames.</li>
+            <li>SVG is the XHTML of vector graphics</li>
+            <li>How do you remember that the namespace uri is "<a href="http://www.w3.org/2000/svg">http://www.w3.org/2000/svg</a>"?</li>
+            <li>SVG reminds me of postscript.</li>
+            <li>Instead of specifying an exact algorithm to draw an image, describe what the image looks like.</li>
+            <li>Geometry can get very complex.</li>
+            <li>There are a lot of programs to make SVG images so you don't have to.</li>
+            <li>SVG animation is possible.</li>
+            <li><a href="https://www.w3.org/TR/SVG/Overview.html">w3c specification for SVG</a></li>
+            <li>SVG scripting and DOM manipulation is possible depending on security and rendering level.</li>
+            <li>Drag and Drop allows a user to move elements into other elements.</li>
+            <li>Just another way to get user input.</li>
+            <li>Can be used to quickly get files from user.</li>
+            <li>How do people who can't use a mouse handle drag-and-drop?</li>
+            <li></li>
+            <li></li>
+    </ul>
+    <footer><a href='/portfolio/'>home</a></footer>
+  </body>
+</html>
