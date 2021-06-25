@@ -35,7 +35,13 @@ data = [
       {
         label: "Week 6",
         url: "week06/"
-      },
+      }
+      ]
+  },
+
+  {
+    section: "Block 2",
+    links: [
       {
         label: "Week 7",
         url: "week07/"
@@ -47,6 +53,10 @@ data = [
       {
         label:'Week 9',
         url: 'week09/'
+      },
+      {
+        label:'Week 10',
+        url: 'week10/'
       }
     ]
   }
