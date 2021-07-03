@@ -57,7 +57,11 @@ data = [
       {
         label:'Week 10',
         url: 'week10/'
-      }
+      },
+      {
+        label:'Week 11',
+        url: 'week11/'
+      },
     ]
   }
 ]
