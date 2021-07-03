@@ -12,7 +12,24 @@
     <h1>Notes</h1>
     <h2>READING</h2>
     <ul>
-      <li></li>
+      <li>There were no reading assignments this week.</li>
+      <li>I have no idea how I'm gonna submit this.</li>
+    </ul>
+    <h2>Doubloon Crossers</h2>
+    <ul>
+      <li>This has been a big project of mine for the past several weeks.</li>
+      <li>Two clients exist: <ul>
+          <li>Display client or "central client"</li>
+          <li>Input client or "user client"</li>
+        </ul></li>
+      <li>Both clients are static web pages.</li>
+      <li>Communication is accomplished with web sockets.</li>
+      <li>Web sockets server is in Racket.</li>
+      <li>Web Sockets server is written to die after 5 minutes without activity. This is resolved by having the clients send a ping every few minutes.</li>
+      <li>Messages are sent between server and clients in JSON format.</li>
+      <li>"Message" tells the recipient what to do, interpreted manually.</li>
+      <li>"params" are the parameters to the message.</li>
+      <li>I used higher order functions to handle messages like events.</li>
     </ul>
     <footer><a href='/portfolio/'>home</a></footer>
   </body>
