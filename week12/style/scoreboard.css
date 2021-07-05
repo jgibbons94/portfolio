@@ -4,6 +4,8 @@ h1 {
     color: #d8d8d8;
     padding-top: 1em;
     padding-bottom: 1em;
+    font-weight: 1000;
+    letter-spacing: 0.2em;
 }
 
 th {
