@@ -1,0 +1,5 @@
+[{"name":"Banana",     "color":"yellow", "score":1000 },
+ {"name":"Bread",      "color":"tan",    "score":500  },
+ {"name":"plum",       "color":"purple", "score":1500 },
+ {"name":"licorice",   "color":"black",  "score":15   },
+ {"name":"strawberry", "color":"red",    "score":250  }]
