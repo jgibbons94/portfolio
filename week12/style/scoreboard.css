@@ -35,7 +35,7 @@ table, h1, footer {
 
 tr:nth-child(2n+1) {
     background: hsl(30deg 98% 80%);
-    background:linear-gradient(0deg, hsl(31deg,98%,79%),
+    background:linear-gradient(-30deg, hsl(31deg,98%,79%),
 hsl(32deg,99%,82%),
 hsl(28deg,97%,77%),
 hsl(28deg,100%,82%),
@@ -248,7 +248,7 @@ hsl(29deg,96%,80%))
 }
 tr:nth-child(2n) {
     background: hsl(60deg 100% 90%);
-    background: linear-gradient(0deg, hsl(61deg, 99%, 96%),
+    background: linear-gradient(-15deg, hsl(61deg, 99%, 96%),
 hsl(59deg, 96%, 89%),
 hsl(61deg, 100%, 94%),
 hsl(60deg, 99%, 91%),
