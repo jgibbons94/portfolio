@@ -6,37 +6,37 @@ let nextURL = '';
 let prevURL = '';
 
 function getJSON(url) {
-    return fetch(url)
+  return fetch(url)
     .then(response => response.json())
     .then(data => {
-        console.table(data);
-        nextURL = data.next;
-        prevURL = data.previous;
+      console.table(data);
+      nextURL = data.next;
+      prevURL = data.previous;
 
 
-        const charList = document.getElementById('character-list');
-        const list = document.createElement('ul');
-        list.classList = 'charBox';
-        data.results.map(makePerson).forEach(element => {
-            list.appendChild(element)
-        });;
-        charList.innerHTML = '';
-        charList.appendChild(list);
-});
+      const charList = document.getElementById('character-list');
+      const list = document.createElement('ul');
+      list.classList = 'charBox';
+      data.results.map(makePerson).forEach(element => {
+        list.appendChild(element)
+      });;
+      charList.innerHTML = '';
+      charList.appendChild(list);
+    });
 }
 function makePerson({
-    name,
-    height,
-    mass,
-    hair_color,
-    skin_color,
-    eye_color,
-    birth_year,
-    gender
+  name,
+  height,
+  mass,
+  hair_color,
+  skin_color,
+  eye_color,
+  birth_year,
+  gender
 }) {
-    const charEl = document.createElement('li');
-    charEl.classList = 'charDetails';
-    charEl.innerHTML = `<h3 onclick="showDetails(this)">${name}</h3>
+  const charEl = document.createElement('li');
+  charEl.classList = 'charDetails';
+  charEl.innerHTML = `<h3 onclick="showDetails(this)">${name}</h3>
     <ul>
     <li>Height: ${height}</li>
     <li>Mass: ${mass}</li>
@@ -46,16 +46,16 @@ function makePerson({
     <li>Birth year: ${birth_year}</li>
     <li>Gender: ${gender}</li>
     </ul>`;
-    return charEl;
+  return charEl;
 }
 
 function showDetails(element){
-    const list = element.nextSibling.nextSibling;
-    if (list.style.display === "none") {
-        list.style.display = "block";
-      } else {
-        list.style.display = "none";
-      }
+  const list = element.nextSibling.nextSibling;
+  if (list.style.display === "none") {
+    list.style.display = "block";
+  } else {
+    list.style.display = "none";
+  }
 }
 
 document.querySelector('#nextButton').addEventListener('click', function(event){getJSON(nextURL)});

@@ -7,7 +7,7 @@
  *
  *      I also want to avoid object-oriented programming when possible in
  *      this course, just to get a challenge.
-  */
+ */
 data = [
   {
     section: "Block 1",
@@ -36,7 +36,7 @@ data = [
         label: "Week 6",
         url: "week06/"
       }
-      ]
+    ]
   },
 
   {

@@ -2,10 +2,10 @@ const errorDiv = document.querySelector("#error");
 const scoreTable = document.querySelector("#score-table");
 const clearTable = ()=>scoreTable.innerHTML = "";
 const setScoreboardContents = markup =>
- scoreTable.innerHTML = markup;
+  scoreTable.innerHTML = markup;
 const tableRows = data => data.sort(
-({score:score1},{score:score2})=>score2-score1)
-.reduce((x,y)=>
+  ({score:score1},{score:score2})=>score2-score1)
+  .reduce((x,y)=>
 `${x}\n${tableRow(y)}`, "");
 const tableRow = ({name, color, score})=>
 `                <tr>
@@ -18,11 +18,11 @@ const tableRow = ({name, color, score})=>
                 </tr>`;
 
 export const fillScoreBoard = data => {
-    clearTable();
-    setScoreboardContents(tableRows(data));
+  clearTable();
+  setScoreboardContents(tableRows(data));
 }
 
 export const reportError = e => {
-    console.error("There was an error fetching the data.");
-    errorDiv.innerHTML = "There was an error fetching the data.";
+  console.error("There was an error fetching the data.");
+  errorDiv.innerHTML = "There was an error fetching the data.";
 }

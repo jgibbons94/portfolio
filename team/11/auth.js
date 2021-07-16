@@ -45,7 +45,7 @@ export default class Auth {
     try {
       // 3. add the code here to make a request for the user identified by email...don't forget to send the token!
       const request = await makeRequest('users?email=' + email, 'GET', null, this.token);
-    return request[0];
+      return request[0];
 
     } catch (error) {
       // if there were any errors display them

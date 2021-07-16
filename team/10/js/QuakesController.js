@@ -59,7 +59,7 @@ export default class QuakesController {
   }
   async getQuakeDetails(quakeId) {
     // get the details for the quakeId provided from the model, then send them to the view to be displayed
-   const quakeDetails = this.quakes.getQuakeById(quakeId);
-   this.quakesView.renderQuake(quakeDetails, this.parentElement);
+    const quakeDetails = this.quakes.getQuakeById(quakeId);
+    this.quakesView.renderQuake(quakeDetails, this.parentElement);
   }
 }

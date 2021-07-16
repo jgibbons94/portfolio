@@ -7,11 +7,11 @@ button.addEventListener('click', () => {getUserInput();
 });
 
 function getUserInput() {
-    const input = document.getElementById('radiusInput').value;
-    if (input === "") {
-        document.getElementById('message').innerText = "You must enter a number";
-    } else {
+  const input = document.getElementById('radiusInput').value;
+  if (input === "") {
+    document.getElementById('message').innerText = "You must enter a number";
+  } else {
     quakesController.init(Number(input))
     document.getElementById('message').innerText = "";
-    }
+  }
 }

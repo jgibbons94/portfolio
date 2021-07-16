@@ -21,7 +21,7 @@ const appendError = text => {
 }
 
 form.onsubmit = (e) => {
-    error.innerHTML = "";
+  error.innerHTML = "";
   const errors = validate.check(validation);
   console.table(errors);
   if(errors.length !== 0)

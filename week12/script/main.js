@@ -12,11 +12,11 @@
     })()*/
 import {fillScoreBoard, reportError} from "/portfolio/week12/script/scoreBoard.js";
 fetch("/portfolio/data.json")
-.then(response=>{
+  .then(response=>{
     if (response.ok)
       return response.json()
     else
       throw new Error("fetch failed");
-    })
-.then(fillScoreBoard)
-.catch(reportError)
+  })
+  .then(fillScoreBoard)
+  .catch(reportError)

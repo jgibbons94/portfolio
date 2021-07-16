@@ -9,20 +9,20 @@ const player2 = "O";
 let player = player1;
 
 function placeMark(e) {
-    console.log(e.target);
-    e.target.innerHTML = player;
-    if (player == player1) {
-        player = player2;
-    } else {
-        player = player1;
-    }
+  console.log(e.target);
+  e.target.innerHTML = player;
+  if (player == player1) {
+    player = player2;
+  } else {
+    player = player1;
+  }
 }
 
 function resetGame() {
-    const squares = document.querySelectorAll('.board td');
-    for (square of squares) {
-        square.innerHTML = "";
-    }
+  const squares = document.querySelectorAll('.board td');
+  for (square of squares) {
+    square.innerHTML = "";
+  }
 }
 
 
