@@ -10,7 +10,7 @@
     console.log("response ok.")
     const obj = await response.json();
     })()*/
-import {fillScoreBoard, reportError} from "/portfolio/week12/script/scoreBoard.js";
+import {fillScoreBoard, reportError} from "/portfolio/week13/script/scoreBoard.js";
 fetch("/portfolio/data.json")
   .then(response=>{
     if (response.ok)
