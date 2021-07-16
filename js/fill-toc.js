@@ -1,7 +1,7 @@
 /*
  * Copyright (c) 2021 Jesse Gibbons
  * All rights reserved
- * 
+ *
  * Note: I am using functional programming tricks to make it difficult for
  *       less experienced programmers to explain what I'm doing.
  *

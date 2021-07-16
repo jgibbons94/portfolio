@@ -21,7 +21,7 @@ export class Hike {
         this.difficulty = difficulty
         this.description = description
         this.directions = directions
-        
+
         this.showingDetails = false
         this.id = id
         this.getAllComments()
@@ -109,7 +109,7 @@ export class Hike {
             return []
         }
 
-        let tempComments = [] 
+        let tempComments = []
 
         jsonComments.forEach(jsonComment => {
             let comment = new Comment()
@@ -144,7 +144,7 @@ export class Hike {
                 Object.assign(comment, jsonComment)
                 allComments.push(comment)
             })
-        }        
+        }
         allComments.push(newComment)
         localStorage.setItem('comments', JSON.stringify(allComments))
 

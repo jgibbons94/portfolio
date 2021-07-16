@@ -25,13 +25,13 @@ function getJSON(url) {
 });
 }
 function makePerson({
-    name, 
-    height, 
-    mass, 
-    hair_color, 
-    skin_color, 
-    eye_color, 
-    birth_year, 
+    name,
+    height,
+    mass,
+    hair_color,
+    skin_color,
+    eye_color,
+    birth_year,
     gender
 }) {
     const charEl = document.createElement('li');

@@ -14,4 +14,4 @@ export class Comment {
         this.type = type
     }
 
-} 
+}

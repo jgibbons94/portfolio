@@ -9,7 +9,7 @@ header h1 {
 /* these things may need name changes later */
 .hike {
     display: grid;
-    grid-template-areas: 
+    grid-template-areas:
       'name name'
       'picture contentArea'
       'details details';

@@ -97,5 +97,5 @@ function resetGame() {
 
 // function getWinner() {
 //     const boardText = document.querySelectorAll(".board tr").map(x => x.querySelectorAll("td").map(y => y.textContent));
-//     const checkWin 
+//     const checkWin
 // }

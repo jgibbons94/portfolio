@@ -63,4 +63,3 @@ export default class QuakesController {
    this.quakesView.renderQuake(quakeDetails, this.parentElement);
   }
 }
-  

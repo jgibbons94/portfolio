@@ -15,7 +15,7 @@ export default class Auth {
     const username = document.getElementById('username');
     const postData = {
       email: username.value,
-      password: password.value  
+      password: password.value
     };
     try {
       // 1. use the makeRequest function to pass our credentials to the server
@@ -30,7 +30,7 @@ export default class Auth {
       document.getElementById('login').classList.add('hidden');
       // clear the password
       password.value = '';
-      
+
       // since we have a token let's go grab some data from the API by executing the callback if one was passed in
       if(callback) {
         callback();
@@ -46,7 +46,7 @@ export default class Auth {
       // 3. add the code here to make a request for the user identified by email...don't forget to send the token!
       const request = await makeRequest('users?email=' + email, 'GET', null, this.token);
     return request[0];
-    
+
     } catch (error) {
       // if there were any errors display them
       const displayErrors = document.querySelector('.errors');
@@ -54,7 +54,7 @@ export default class Auth {
       console.log(error);
     }
   }
-  
+
   set token(value) {
     // we need this for the getter to work...but we don't want to allow setting the token through this.
   }
