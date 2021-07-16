@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
-  <head profile="http://www.w3.org/2005/10/profile">
-<link rel="icon" type="image/png"  href="/portfolio/icons/favicon.png">
+  <head>
+    <link rel="shortcut icon" type="image/png"  href="/portfolio/icons/favicon.png">
     <link href='/portfolio/style/standard.css' type='text/css' rel='stylesheet'>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,14 +22,14 @@
           <li>Display client or "central client"</li>
           <li>Input client or "user client"</li>
         </ul></li>
-      <li>Both clients are static web pages.</li>
-      <li>Communication is accomplished with web sockets.</li>
-      <li>Web sockets server is in Racket.</li>
-      <li>Web Sockets server is written to die after 5 minutes without activity. This is resolved by having the clients send a ping every few minutes.</li>
-      <li>Messages are sent between server and clients in JSON format.</li>
-      <li>"Message" tells the recipient what to do, interpreted manually.</li>
-      <li>"params" are the parameters to the message.</li>
-      <li>I used higher order functions to handle messages like events.</li>
+        <li>Both clients are static web pages.</li>
+        <li>Communication is accomplished with web sockets.</li>
+        <li>Web sockets server is in Racket.</li>
+        <li>Web Sockets server is written to die after 5 minutes without activity. This is resolved by having the clients send a ping every few minutes.</li>
+        <li>Messages are sent between server and clients in JSON format.</li>
+        <li>"Message" tells the recipient what to do, interpreted manually.</li>
+        <li>"params" are the parameters to the message.</li>
+        <li>I used higher order functions to handle messages like events.</li>
     </ul>
     <footer><a href='/portfolio/'>home</a></footer>
   </body>

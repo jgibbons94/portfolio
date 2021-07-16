@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
-  <head profile="http://www.w3.org/2005/10/profile">
-<link rel="icon" type="image/png"  href="/portfolio/icons/favicon.png">
+  <head>
+    <link rel="shortcut icon" type="image/png"  href="/portfolio/icons/favicon.png">
     <link href='/portfolio/style/standard.css' type='text/css' rel='stylesheet'>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,58 +17,58 @@
       <li><code>&lt;input&gt;</code> elements have attributes that describe basic validation.
       </li>
       <li>
-      <code>:valid</code> css pseudo-class can let web developers apply styles to show which inputs are valid.
+        <code>:valid</code> css pseudo-class can let web developers apply styles to show which inputs are valid.
       </li>
       <li>
-      Match inputs for default style, then override with <code>:valid</code>.
+        Match inputs for default style, then override with <code>:valid</code>.
       </li>
       <li>
-      Use the <code>:invalid</code> and <code>:out-of-range</code> pseudo-class to match specifically invalid elements.
+        Use the <code>:invalid</code> and <code>:out-of-range</code> pseudo-class to match specifically invalid elements.
       </li>
       <li>
-      I previously demonstrated using regular expressions to validate input.
+        I previously demonstrated using regular expressions to validate input.
       </li>
       <li>
-      <code>validationMessage</code> returns a string telling the user what's wrong with their input.
+        <code>validationMessage</code> returns a string telling the user what's wrong with their input.
       </li>
       <li>
-      <code>validity</code> returns a structure describing issues the browser has found when validating an input.
+        <code>validity</code> returns a structure describing issues the browser has found when validating an input.
       </li>
       <li>
-      <code>willValidate</code> is <code>true</code> only if the element will be validated when the form is submitted.
+        <code>willValidate</code> is <code>true</code> only if the element will be validated when the form is submitted.
       </li>
       <li>
-      <code>checkValidity()</code> returns <code>true</code> if the element is valid and fires
-      <code>Invalid Event</code> before returning <code>false</code> otherwise.
+        <code>checkValidity()</code> returns <code>true</code> if the element is valid and fires
+        <code>Invalid Event</code> before returning <code>false</code> otherwise.
       </li>
       <li>
-      <code>setCustomValidity()</code> sets the browser's validation message.
+        <code>setCustomValidity()</code> sets the browser's validation message.
       </li>
       <li>
-      Threat actors will always be able to send invalid data on simple javascript forms because they can see whatever
-      API the page sends their form to and use <code>curl</code> to send unvalidated input. It is best to validate
-      important information on the server end. Web page form validation is specifically for user benefit.
+        Threat actors will always be able to send invalid data on simple javascript forms because they can see whatever
+        API the page sends their form to and use <code>curl</code> to send unvalidated input. It is best to validate
+        important information on the server end. Web page form validation is specifically for user benefit.
       </li>
     </ul>
     <h3>Using Fetch</h3>
     <ul>
       <li>Back in my day, we used <code>XMLHttpRequest</code> objects to get data from a server. They were cumbersome
-      to type without autocomplete features. But for some reason, portraying grumpy old man means I'm obligated to
-      shout about how we <em>liked</em> it!
+        to type without autocomplete features. But for some reason, portraying grumpy old man means I'm obligated to
+        shout about how we <em>liked</em> it!
       </li>
       <li>
-      The fetch api simplifies the <code>XMLHttpRequest</code> lifecycle.
+        The fetch api simplifies the <code>XMLHttpRequest</code> lifecycle.
       </li>
       <li>
-      Call <code>fetch</code> with the desired url and options, and chain the <code>then</code> function to the result
-      with what you want to do with the data.
+        Call <code>fetch</code> with the desired url and options, and chain the <code>then</code> function to the result
+        with what you want to do with the data.
       </li>
       <li>
-      I wouldn't be surprised if this was a popular third-party library before it became a standard.
+        I wouldn't be surprised if this was a popular third-party library before it became a standard.
       </li>
       <li>
-      HTTP specifies POST, GET, FETCH, PATCH, ... methods for requests to use, but it's up to the server to interpret
-      every request.
+        HTTP specifies POST, GET, FETCH, PATCH, ... methods for requests to use, but it's up to the server to interpret
+        every request.
       </li>
       <li>
         <code>fetch</code> can specify a CORS policy, whether to cache results, whether to include credentials, custom http headers, what to do in case of redirect, the referrer policy, and the body of the request.

@@ -1,9 +1,9 @@
 <!doctype html>
 <html lang="en">
-  <head profile="http://www.w3.org/2005/10/profile">
-<link rel="icon" type="image/png"  href="/portfolio/icons/favicon.png">
+  <head>
+    <link rel="shortcut icon" type="image/png"  href="/portfolio/icons/favicon.png">
     <link href='/portfolio/style/standard.css' type='text/css'
-    rel='stylesheet'>
+          rel='stylesheet'>
     <style>
 ol.rules > li{
   counter-increment: rules;
@@ -25,153 +25,153 @@ ol.rules {
     <article>
       <h1>Functional JavaScript</h1>
       <section>
-      <h2>What is functional programming?</h2>
+        <h2>What is functional programming?</h2>
         <p>As a programmer, I try to keep my code clean by
         following the functional style as much as possible. Whereas
         a traditional imperative approach to programming focuses on
         the steps a program should follow, a functional approach
         focuses on the mathematical aspects of programming. I
         think <a href="https://www.lispcast.com">Eric
-        Normand</a> does a good job explaining the theory
+          Normand</a> does a good job explaining the theory
         behind functional programming in his podcast, <a
-        href="https://www.lispcast.com/category/podcast/">Thoughts on
-        Functional Programming</a>. To summarize his explanation,
-        functional programmers separate their work into data,
-        calculations, and actions. Data is information being
-        processed. Calculations are ways of consistently transforming
-        data. Actions are things a program does based on the given
-        transformed data. In my personal opinion, lispy languages provide
-        the best flexibility and consistency in the functional style
-        because their simple grammar provide a lot of power.</p>
-      <p>In contrast with lisp, which has a strong functional focus,
-      JavaScript has had an inescapable strong imperative focus. Back
-      in the early days of HTML5 when I first learned JavaScript, all
-      functions, even the anonymous kind, had a return clause, and there
-      was a strong focus on things like DOM manipulation, AJAX, and
-      drawing to a canvas. Since then, a lot has been added that makes
-      functional programming much more concise. An anonymous function
-      declared with <code>function(x){return x+1;}</code> can now be
-      declared <code>x=&gt;x+1</code>, which is much more concise and
-      to the point. I'm happy to know people trained in web development
-      are now (eventually) shown how to program in the functional style
-      with JavaScript.</p>
+                                                          href="https://www.lispcast.com/category/podcast/">Thoughts on
+                                                          Functional Programming</a>. To summarize his explanation,
+                                                        functional programmers separate their work into data,
+                                                        calculations, and actions. Data is information being
+                                                        processed. Calculations are ways of consistently transforming
+                                                        data. Actions are things a program does based on the given
+                                                        transformed data. In my personal opinion, lispy languages provide
+                                                        the best flexibility and consistency in the functional style
+                                                        because their simple grammar provide a lot of power.</p>
+        <p>In contrast with lisp, which has a strong functional focus,
+        JavaScript has had an inescapable strong imperative focus. Back
+        in the early days of HTML5 when I first learned JavaScript, all
+        functions, even the anonymous kind, had a return clause, and there
+        was a strong focus on things like DOM manipulation, AJAX, and
+        drawing to a canvas. Since then, a lot has been added that makes
+        functional programming much more concise. An anonymous function
+        declared with <code>function(x){return x+1;}</code> can now be
+        declared <code>x=&gt;x+1</code>, which is much more concise and
+        to the point. I'm happy to know people trained in web development
+        are now (eventually) shown how to program in the functional style
+        with JavaScript.</p>
       </section>
       <p>In JavaScript: Novice to Ninja, chapter 11 is devoted to all
       the cool things a JavaScript programmer can do with functions. It
       defines pure functions as follows:</p>
       <blockquote><p>A key aspect of functional programming is its use
-      of pure functions. A pure function is a function that adheres to
-      the following rules:</p>
+        of pure functions. A pure function is a function that adheres to
+        the following rules:</p>
         <ol class="rules">
           <li>The return value of a pure function should only depend on
-          the values provided as arguments. It doesn't rely on values
-          from somewhere else in the program.</li>
+            the values provided as arguments. It doesn't rely on values
+            from somewhere else in the program.</li>
           <li>There are no side-effects. A pure function doesn't change
-          any values or data elsewhere in the program. It only makes
-          non-destructive data transformations and returns new values,
-          rather than altering any of the underlying data.</li>
+            any values or data elsewhere in the program. It only makes
+            non-destructive data transformations and returns new values,
+            rather than altering any of the underlying data.</li>
           <li> Referential transparency. Given the same arguments,
-          a pure function will always return the same result.</li>
+            a pure function will always return the same result.</li>
         </ol>
         <p>In order to follow these rules, any pure function must
         have:</p>
         <ul>
           <li>At least one argument; otherwise the return value must
-          depend on something other than the arguments of the function,
-          breaking the first rule</li>
+            depend on something other than the arguments of the function,
+            breaking the first rule</li>
           <li>A return value; otherwise there’s no point in the function
-          (unless it has changed something else in the program – in
-          which case, it’s broken the 'no side-effects' rule).</li>
+            (unless it has changed something else in the program – in
+            which case, it’s broken the 'no side-effects' rule).</li>
         </ul>
       </blockquote>
       <section>
         <h2>Problems with the book's definitions.</h2>
-      <p>I agree with most of this. Some of the rules are complex tests,
-      so I'll divide them as I think a logician would interpret them:</p>
-      <ol class="rules">
-        <li><quote>The return value of a pure function should only depend
-        on the values provided as arguments. It doesn't rely on values
-        from somewhere else in the program.</quote>
-          <p>This rule can be divided into the following tests:</p>
+        <p>I agree with most of this. Some of the rules are complex tests,
+        so I'll divide them as I think a logician would interpret them:</p>
+        <ol class="rules">
+          <li><quote>The return value of a pure function should only depend
+            on the values provided as arguments. It doesn't rely on values
+            from somewhere else in the program.</quote>
+            <p>This rule can be divided into the following tests:</p>
+            <ul>
+              <li>Does the return value depend on the values provided as
+                arguments? Expect yes if it is a pure function.</li>
+              <li>Does the return value depend on values outside
+                those provided as arguments? Expect no if it is a pure
+                function.</li>
+              <li>Does the return value rely on values from somewhere else
+                in the program? Expect no if it is a pure function.</li>
+            </ul>
+          </li>
+          <li><quote>There are no side-effects. A pure function doesn't
+            change any values or data elsewhere in the program. It only makes
+            non-destructive data transformations and returns new values,
+            rather than altering any of the underlying data.</quote>
+            <p>This rule can be divided into the following tests:</p>
+            <ul>
+              <li>Does it change data elsewhere in the program? Expect no
+                if it is a pure function.</li>
+              <li>Are any of its data transformations destructive? Expect
+                no if it is a pure function.</li>
+              <li>Does it return new values? Expect yes if it is a pure
+                function.</li>
+              <li>Does it alter any of the underlying data? Expect no if
+                it is a pure function.</li>
+            </ul>
+          </li>
+          <li><quote>Referential transparency. Given the same arguments,
+            a pure function will always return the same result.</quote>
+            <p>This one is simple, so I won't divide it further. I'll just
+            leave it at "For all x, does f(x) = f(x)?"</p>
+          </li>
+          <p>The problem I have is that these rules disqualify some things
+          that I think anyone would agree are pure functions:</p>
           <ul>
-            <li>Does the return value depend on the values provided as
-            arguments? Expect yes if it is a pure function.</li>
-            <li>Does the return value depend on values outside
-            those provided as arguments? Expect no if it is a pure
-            function.</li>
-            <li>Does the return value rely on values from somewhere else
-            in the program? Expect no if it is a pure function.</li>
+            <li><p>Does the return value depend on the values provided as
+              arguments? Expect yes if it is a pure function.</p>
+              <p>Counterexample: <code>x=&gt;4</code></p>
+            </li>
+            <li><p>Does the return value depend on values outside those
+              provided as arguments? Expect no if it is a pure function.</p>
+              <p>Counterexample: <code>x=&gt;x+4</code></p>
+            </li>
+            <li><p>Does the return value rely on values from somewhere
+              else in the program? Expect no if it is a pure function.</p>
+              <p>Counterexample: <code>const c = 10;
+                x=&gt;x+c</code></p>
+            </li>
+            <li><p>Does it change data elsewhere in the program? Expect
+              no if it is a pure function.</p>
+              <p>I cannot think of a counterexample for this rule.</p>
+            </li>
+            <li><p>Are any of its data transformations destructive? Expect
+              no if it is a pure function.</p>
+              <p>I cannot think of a counterexample for this rule.</p>
+            </li>
+            <li><p>Does it return new values? Expect yes if it is a pure
+              function.</p>
+              <p>Counterexample: <code>x=&gt;x</code> returns the original
+              vale, not a new value.</p>
+            </li>
+            <li><p>Does it alter any of the underlying data? Expect no if
+              it is a pure function.</p>
+              <p>I cannot think of a counterexample for this rule.</p>
+            </li>
+            <li><p>For all x, does f(x) = f(x)?</p>
+              <p>I cannot think of a counterexample for this rule.</p>
+            </li>
           </ul>
-        </li>
-        <li><quote>There are no side-effects. A pure function doesn't
-        change any values or data elsewhere in the program. It only makes
-        non-destructive data transformations and returns new values,
-        rather than altering any of the underlying data.</quote>
-          <p>This rule can be divided into the following tests:</p>
-          <ul>
-            <li>Does it change data elsewhere in the program? Expect no
-            if it is a pure function.</li>
-            <li>Are any of its data transformations destructive? Expect
-            no if it is a pure function.</li>
-            <li>Does it return new values? Expect yes if it is a pure
-            function.</li>
-            <li>Does it alter any of the underlying data? Expect no if
-            it is a pure function.</li>
-          </ul>
-        </li>
-        <li><quote>Referential transparency. Given the same arguments,
-        a pure function will always return the same result.</quote>
-          <p>This one is simple, so I won't divide it further. I'll just
-          leave it at "For all x, does f(x) = f(x)?"</p>
-        </li>
-        <p>The problem I have is that these rules disqualify some things
-        that I think anyone would agree are pure functions:</p>
-        <ul>
-          <li><p>Does the return value depend on the values provided as
-          arguments? Expect yes if it is a pure function.</p>
-            <p>Counterexample: <code>x=&gt;4</code></p>
-          </li>
-          <li><p>Does the return value depend on values outside those
-          provided as arguments? Expect no if it is a pure function.</p>
-            <p>Counterexample: <code>x=&gt;x+4</code></p>
-          </li>
-          <li><p>Does the return value rely on values from somewhere
-          else in the program? Expect no if it is a pure function.</p>
-            <p>Counterexample: <code>const c = 10;
-              x=&gt;x+c</code></p>
-          </li>
-          <li><p>Does it change data elsewhere in the program? Expect
-          no if it is a pure function.</p>
-            <p>I cannot think of a counterexample for this rule.</p>
-          </li>
-          <li><p>Are any of its data transformations destructive? Expect
-          no if it is a pure function.</p>
-            <p>I cannot think of a counterexample for this rule.</p>
-          </li>
-          <li><p>Does it return new values? Expect yes if it is a pure
-          function.</p>
-            <p>Counterexample: <code>x=&gt;x</code> returns the original
-            vale, not a new value.</p>
-          </li>
-          <li><p>Does it alter any of the underlying data? Expect no if
-          it is a pure function.</p>
-            <p>I cannot think of a counterexample for this rule.</p>
-          </li>
-          <li><p>For all x, does f(x) = f(x)?</p>
-            <p>I cannot think of a counterexample for this rule.</p>
-          </li>
-        </ul>
-        <p>Along with these counterexamples, the requirement that a
-        pure function have arguments is false. <code>()=&gt;4</code>
-        is equivalent to <code>x=&gt;4</code> except the first accepts
-        one unused argument and the other accepts zero. A more rigid
-        definition of functional programming concepts would make it
-        easier for students to understand what they are and will prevent
-        misunderstandings when counterexamples like those above are
-        encountered in the wild.</p>
+          <p>Along with these counterexamples, the requirement that a
+          pure function have arguments is false. <code>()=&gt;4</code>
+          is equivalent to <code>x=&gt;4</code> except the first accepts
+          one unused argument and the other accepts zero. A more rigid
+          definition of functional programming concepts would make it
+          easier for students to understand what they are and will prevent
+          misunderstandings when counterexamples like those above are
+          encountered in the wild.</p>
       </section>
       <section><h2>Problems I have with JavaScript's functional
-      grammar</h2>
+          grammar</h2>
         <p>The book goes on to describe fundamental concepts like
         higher-order functions, which take and/or return functions, and
         currying, which is a technique to embed values in the function
@@ -182,11 +182,11 @@ ol.rules {
         <code>x=&gt;y=&gt;z=&gt;(x+y)/z</code>. This is some
         spicy Haskell-styled curry! I like it so far! In lisp
         this is <code>(lambda (x) (lambda (y) (lambda (z) (/
-        (+ x y) z))))</code>. Don't get me started on how macros
+          (+ x y) z))))</code>. Don't get me started on how macros
         could make this shorter. Now suppose we want to quickly
         apply these lambdas and get a value. This is easy in lisp:
         <code>((((lambda (x) (lambda (y) (lambda (z) (/ (+ x y) z))))
-        2) 5) 7)</code>. Simple and no harder to read or write than
+          2) 5) 7)</code>. Simple and no harder to read or write than
         anything else in lisp. Now let's do the same thing in JavaScript:
         <code>(x=&gt;y=&gt;z=&gt;(x+y)/z)(2)(5)(7)</code>. What's
         this? I'm counting parentheses? Not only that, I'm counting

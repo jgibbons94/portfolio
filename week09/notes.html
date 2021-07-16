@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
-  <head profile="http://www.w3.org/2005/10/profile">
-<link rel="icon" type="image/png"  href="/portfolio/icons/favicon.png">
+  <head>
+    <link rel="shortcut icon" type="image/png"  href="/portfolio/icons/favicon.png">
     <link href='/portfolio/style/standard.css' type='text/css' rel='stylesheet'>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,158 +13,158 @@
     <h2>READING</h2>
     <ul>
       <li>
-      BOM lets programs work with browser and monitor.
+        BOM lets programs work with browser and monitor.
       </li>
       <li>
-      BOM has no official standard according to outdated book. Standard is actually described in HTML standard according to MDN.
+        BOM has no official standard according to outdated book. Standard is actually described in HTML standard according to MDN.
       </li>
       <li>
-      All global variables declared outside of modules belong to the <code>window</code> object.
+        All global variables declared outside of modules belong to the <code>window</code> object.
       </li>
       <li>
-      Outdated book shows off legacy code, including <code>alert</code>, <code>prompt</code>, and <code>confirm</code>
+        Outdated book shows off legacy code, including <code>alert</code>, <code>prompt</code>, and <code>confirm</code>
       </li>
       <li>
-      <code>navigator</code> contains the <code>userAgent</code> value, which lets code discriminate by browser.
+        <code>navigator</code> contains the <code>userAgent</code> value, which lets code discriminate by browser.
       </li>
       <li>
-      <code>navigator</code> also lets scripts identify available media capabilities, media sessions, mimetypes, permissions, platform, plugins, and other information that lets scripts adjust to capabilities.
+        <code>navigator</code> also lets scripts identify available media capabilities, media sessions, mimetypes, permissions, platform, plugins, and other information that lets scripts adjust to capabilities.
       </li>
       <li>
-      <code>navigator</code> can be used to fingerprint, so there are security-oriented browsers and extensions designed to break expected conventions.
+        <code>navigator</code> can be used to fingerprint, so there are security-oriented browsers and extensions designed to break expected conventions.
       </li>
       <li>
-      <code>location</code> contains information about the current URL and methods to change the current URL.
+        <code>location</code> contains information about the current URL and methods to change the current URL.
       </li>
       <li>
-      <code>history</code> lets links navigate through browser history. 
+        <code>history</code> lets links navigate through browser history. 
       </li>
       <li>
-      <code>history</code> contains the number of pages the current tab has been to
+        <code>history</code> contains the number of pages the current tab has been to
       </li>
       <li>
-      Data provided by <code>history</code> can be used with server logs to determine if the user was browsing in the current tab before navigating to the current page.
+        Data provided by <code>history</code> can be used with server logs to determine if the user was browsing in the current tab before navigating to the current page.
       </li>
       <li>
-      <code>window.open</code> can create a popup window, which is very annoying.
+        <code>window.open</code> can create a popup window, which is very annoying.
       </li>
       <li>
-      I think most modern browsers just make <code>window.open</code> make a new tab, but I haven't tested it.
+        I think most modern browsers just make <code>window.open</code> make a new tab, but I haven't tested it.
       </li>
       <li>
-      Windows made from <code>window.open</code> can be closed in a script. This is still annoying.
+        Windows made from <code>window.open</code> can be closed in a script. This is still annoying.
       </li>
       <li>
-      Don't use <code>window.open</code>, <code>window.move</code>, or <code>window.resize</code> if you want people to visit your site.
+        Don't use <code>window.open</code>, <code>window.move</code>, or <code>window.resize</code> if you want people to visit your site.
       </li>
       <li>
-      <code>window.screen</code> contains fingerprint data for the user's screen.
+        <code>window.screen</code> contains fingerprint data for the user's screen.
       </li>
       <li>
-      I think <code>window.screen</code> has been replaced by css <code>@media</code> rules, because there's little legitimate use for <code>window.screen</code> outside styling.
+        I think <code>window.screen</code> has been replaced by css <code>@media</code> rules, because there's little legitimate use for <code>window.screen</code> outside styling.
       </li>
       <li>
-      Cookies are data sent to the server and stored in the browser.
+        Cookies are data sent to the server and stored in the browser.
       </li>
       <li>
-      Cookies are mostly replaced by the more secure <code>sessionStorage</code> and <code>localStorage</code> which don't transfer data with html.
+        Cookies are mostly replaced by the more secure <code>sessionStorage</code> and <code>localStorage</code> which don't transfer data with html.
       </li>
       <li>
-      Cookies are still used for authentication.
+        Cookies are still used for authentication.
       </li>
       <li>
-      Cookies expire, get old, and crumble, but browser crashes may prevent this.
+        Cookies expire, get old, and crumble, but browser crashes may prevent this.
       </li>
       <li>
-      Cookies set properties with strings. I think it's because they predate JSON.
+        Cookies set properties with strings. I think it's because they predate JSON.
       </li>
       <li>
-      <code>setTimeout</code> runs a function after the specified number of milliseconds.
+        <code>setTimeout</code> runs a function after the specified number of milliseconds.
       </li>
       <li>
-      <code>setInterval</code> runs a function every specified number of milliseconds.
+        <code>setInterval</code> runs a function every specified number of milliseconds.
       </li>
       <li>
-      <code>setInterval</code> might be used for animation.
+        <code>setInterval</code> might be used for animation.
       </li>
       <li>
-      <code>requestAnimationFrame</code> is a better animation call because it calls the function on the next rendering frame.
+        <code>requestAnimationFrame</code> is a better animation call because it calls the function on the next rendering frame.
       </li>
       <li>
-      Timing functions return an id that can be used to cancel them.
+        Timing functions return an id that can be used to cancel them.
       </li>
       <li>
-      CSS is better for DOM animations than JS.
+        CSS is better for DOM animations than JS.
       </li>
       <li>
-      <code>requestAnimationFrame</code> is mostly useful for the <code>canvas</code> api.
+        <code>requestAnimationFrame</code> is mostly useful for the <code>canvas</code> api.
       </li>
       <li>
-      Lists of HTML/JS/CSS APIs, links to their specifications, known bugs, and statistics about their availability can be found at <a href="https://www.html5test.com">html5 test</a> and <a href="https://www.caniuse.com">can i use</a>
+        Lists of HTML/JS/CSS APIs, links to their specifications, known bugs, and statistics about their availability can be found at <a href="https://www.html5test.com">html5 test</a> and <a href="https://www.caniuse.com">can i use</a>
       </li>
       <li>
-      These references are more up-to-date than the book.
+        These references are more up-to-date than the book.
       </li>
       <li>
-      Attributes beginning with <code>data-</code> are officially supported.
+        Attributes beginning with <code>data-</code> are officially supported.
       </li>
       <li>
-      <code>data-</code> attributes can have any name that begins with <code>data-</code> and meets the other xml tag requirements.
+        <code>data-</code> attributes can have any name that begins with <code>data-</code> and meets the other xml tag requirements.
       </li>
       <li>
-      <code>data-</code> attributes are for embedding any type of data.
+        <code>data-</code> attributes are for embedding any type of data.
       </li>
       <li>
-      I've been using <code>localStorage</code> since week 1 of this course. <code>sessionStorage</code> is identical except it's deleted at the end of a session.
+        I've been using <code>localStorage</code> since week 1 of this course. <code>sessionStorage</code> is identical except it's deleted at the end of a session.
       </li>
       <li>
-      Geolocation gives a program the user's location.
+        Geolocation gives a program the user's location.
       </li>
       <li>
-      I've seen it used for getting prices listed at local franchise establishments.
+        I've seen it used for getting prices listed at local franchise establishments.
       </li>
       <li>
-      I suppose it can also be used for an augmented reality mechanic like pokemon go.
+        I suppose it can also be used for an augmented reality mechanic like pokemon go.
       </li>
       <li>
-      Web Workers are the response to JS being single threaded but websites needing heavy calculations.
+        Web Workers are the response to JS being single threaded but websites needing heavy calculations.
       </li>
       <li>
-      I don't think they're relevant anymore with async functions.
+        I don't think they're relevant anymore with async functions.
       </li>
       <li>
-      The WebSockets API is a way to communicate with a server when the server thinks it's ready. It cuts out significant overhead and replaces XHRs in some instances like chatrooms.
+        The WebSockets API is a way to communicate with a server when the server thinks it's ready. It cuts out significant overhead and replaces XHRs in some instances like chatrooms.
       </li>
       <li>
-      The Notifications API is a way to send notifications from a page running in the background to the desktop. 
+        The Notifications API is a way to send notifications from a page running in the background to the desktop. 
       </li>
       <li>
-      WebSockets and Notifications are often seen combined.
+        WebSockets and Notifications are often seen combined.
       </li>
       <li>
-      Multimedia can be embedded with the
-      <code>&lt;audio&gt;</code>
-      and
-      <code>&lt;video&gt;</code>
-      tags.
+        Multimedia can be embedded with the
+        <code>&lt;audio&gt;</code>
+        and
+        <code>&lt;video&gt;</code>
+        tags.
       </li>
       <li>
-      Multiple sources can be provided for a piece of media with
-      <code>&lt;source&gt;</code>
-      tags.
+        Multiple sources can be provided for a piece of media with
+        <code>&lt;source&gt;</code>
+        tags.
       </li>
       <li>
-      The Web Audio API allows a programmer to run calculations on audio samples or generate audio streams.
+        The Web Audio API allows a programmer to run calculations on audio samples or generate audio streams.
       </li>
       <li>
-      The GamePad API gets input from gamepads (game controllers) connected to the client.
+        The GamePad API gets input from gamepads (game controllers) connected to the client.
       </li>
       <li>
-      I used the GamePad API when I submitted a game to the Experimental Gameplay Project. I think that was back in 2012 or 2013. The resulting game wasn't particularly good, but I think I was able to effectively utilize an xbox 360 controller.
+        I used the GamePad API when I submitted a game to the Experimental Gameplay Project. I think that was back in 2012 or 2013. The resulting game wasn't particularly good, but I think I was able to effectively utilize an xbox 360 controller.
       </li>
       <li>
-      I do not know the best way to handle outdated clients. Polyfills can be helpful I suppose, but they add latency when the client is up-to-date.
-      I don't think it's worth supporting browsers more than 3 years old.
+        I do not know the best way to handle outdated clients. Polyfills can be helpful I suppose, but they add latency when the client is up-to-date.
+        I don't think it's worth supporting browsers more than 3 years old.
       </li>
     </ul>
     <footer><a href='/portfolio/'>home</a></footer>

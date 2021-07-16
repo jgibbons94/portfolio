@@ -1,8 +1,9 @@
 <!doctype html>
-<!--Group 3 team assignment week 2-->
+<!-- saved from url=(0054)https://chrissoares26.github.io/WDD330/team/week2.html -->
 <html lang="en"><head>
     <link rel="shortcut icon" type="image/png"  href="/portfolio/icons/favicon.png">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Week 2 team activity That's all. Don't make me pretend otherwise.">
@@ -10,28 +11,40 @@
     <script>
       function userInput(){
               var n = document.getElementById("input").valueAsNumber
+
               var sum = triangleNumbers(n)
               document.getElementById("output").innerHTML = sum
             }
+
       function triangleNumbers(n) {
               return (n * (n+1))/2
             }
+
       function add(n1, n2){
               return n1 + n2
+
             }
-      const sub = (n1, n2) => n1 - n2
+
+      const sub = (n1, n2) => n1 - n2 
+
       const mul = function (n1, n2) {
               return n1 * n2
+
             }
       const div = function (n1, n2) {
               return n1 / n2
+
             }
+
       function applyOperator(f) {
               var n1 = document.getElementById("input").valueAsNumber
               var n2 = document.getElementById("input2").valueAsNumber
+
               document.getElementById("output").innerHTML = f(n1,n2)
             }
+
   </script></head>
+
   <body>
     <main>
       <input type="number" id="input">
@@ -42,6 +55,10 @@
       <button onclick="applyOperator(mul)">*</button>
       <button onclick="applyOperator(div)">/</button>
       <div id="output"></div>
+
+
+
     </main>
-  </body>
-</html>
+
+
+  </body></html>
