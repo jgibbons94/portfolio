@@ -123,3 +123,9 @@ form#filter-form {
 .todo-item input[type="button"] {
   margin-right: 1em;
 }
+
+input#add-item-button {margin-left: 1em;margin-top: 2em;}
+
+label {
+    margin-right: 1em;
+}
