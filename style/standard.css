@@ -54,3 +54,11 @@ code {
   padding-left: 0.5em;
   padding-right: 0.5em;
 }
+
+textarea{
+  margin-top:0.25em;
+}
+
+button {
+    margin: 0.25em;
+}
