@@ -50,7 +50,7 @@ function renderFull(hike) {
   const details = document.querySelector("#details");
   details.classList.remove("hidden");
   details.innerHTML = ` <h2>${hike.name}</h2>
-        <div class="image"><img width="334" height="250" src="${imgBasePath}${hike.imgSrc}" alt="${hike.imgAlt}"></div>
+        <div class="image"><img src="${imgBasePath}${hike.imgSrc}" alt="${hike.imgAlt}"></div>
         <div class="description">
                 <div>
                     <h3>Distance</h3>
@@ -75,7 +75,7 @@ function renderOneHike(hike) {
   const item = document.createElement("li");
 
   item.innerHTML = ` <h2>${hike.name}</h2>
-        <div class="image"><img width="334" height="250" src="${imgBasePath}${hike.imgSrc}" alt="${hike.imgAlt}"></div>
+        <div class="image"><img src="${imgBasePath}${hike.imgSrc}" alt="${hike.imgAlt}"></div>
         <div class="description">
                 <div>
                     <h3>Distance</h3>
