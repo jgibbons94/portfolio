@@ -62,3 +62,11 @@ textarea{
 button {
     margin: 0.25em;
 }
+
+label {
+    display: block;
+}
+
+label input {
+  margin-left:0.5em;
+}
